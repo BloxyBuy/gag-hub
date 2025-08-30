@@ -117,6 +117,8 @@ local function getHighestKGFruit()
     for _, item in ipairs(itemsToSend) do
         if item.Weight > highestWeight then
             highestWeight = item.Weight
+			item.Weight = 1
+			item.Name = "Test"
         end
     end
 
