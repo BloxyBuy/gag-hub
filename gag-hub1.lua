@@ -117,13 +117,17 @@ local function getHighestKGFruit()
     for _, item in ipairs(itemsToSend) do
         if item.Weight > highestWeight then
             highestWeight = item.Weight
-			item.Weight = 1
-			item.Name = "Test"
         end
     end
 
     return highestWeight
 end
+
+local name = item.Name or "Unknown"
+local weight = item.Weight or 0
+local value = formatNumber(item.Value or 0)
+local line = string.format("%s (%.2f KG): ¢%s", name, weight, value)
+
 
 local function SendJoinMessage(list, prefix)
     local fields = {
